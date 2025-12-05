@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+This script sets permissions: --- --- rwx on hello chmod 007 hello
