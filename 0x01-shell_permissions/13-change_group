@@ -1,0 +1,2 @@
+#!/bin/bash
+#!/usr/bin/env bash This script changes group ownership of 'hello' to 'school'chgrp school hello
