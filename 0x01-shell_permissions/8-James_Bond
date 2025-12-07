@@ -1,2 +1,2 @@
-#!/usr/bin/env bash
-This script sets permissions rwx on hello
+#!/bin/bash
+#!/usr/bin/env bash This script sets permissions rwx on hello
