@@ -1,2 +1,2 @@
 #!/bin/bash
-#!/usr/bin/env bashThis script adds execute permission to the owner of the file hellochmod u+x hello
+-rwxr--r--
