@@ -1,2 +1,2 @@
 #!/bin/bash
- This is the script that adds execute permission to the owner of the file named hello.
+-rwxr--r--x
