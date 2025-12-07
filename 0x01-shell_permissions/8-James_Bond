@@ -1,2 +1,2 @@
 #!/bin/bash
--------rwx
+#!/usr/bin/env bash
