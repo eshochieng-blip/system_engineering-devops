@@ -1,2 +1,2 @@
 #!/bin/bash
-chmod u+x 8-James_Bond
+touch 8-James_Bond
