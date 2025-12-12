@@ -1,2 +1,2 @@
 #!/bin/bash
-rm -f 1-for_best_school
+#!/usr/bin/env bash
