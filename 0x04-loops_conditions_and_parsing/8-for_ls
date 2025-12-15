@@ -1,0 +1,20 @@
+#!/bin/bash
+#!/usr/bin/env bash
+# This script lists files in the current directory using a for loop and displays the part of the filename after the first dash.
+
+# Loop through all non-hidden files in the current directory (*)
+for file in *; do
+    
+    # Check if the file name contains a dash (-)
+    if [[ "$file" == *-* ]]; then
+        
+        # Use Bash Parameter Expansion to remove the shortest match of '*' followed by '-'
+        # from the beginning of the string.
+        # This effectively keeps the part of the name *after* the first dash.
+        result="${file#*-}"
+        
+        # Display the result
+        echo "$result"
+    fi
+
+done
