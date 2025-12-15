@@ -1,0 +1,5 @@
+#!/bin/bash
+#!/usr/bin/env bash
+while [ "$count" -le 10 ]; do
+    # Print the required phrase
+    echo "Best School"
