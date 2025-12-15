@@ -1,4 +1,4 @@
-#!bin/bash
+#!/bin/bash
 #!/usr/bin/env bash
 # This script displays its own Process ID (PID) using the special shell variable $$.
 
