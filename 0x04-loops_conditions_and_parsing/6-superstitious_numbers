@@ -1,0 +1,36 @@
+#!/bin/bash
+#!/usr/bin/env bash
+# This script loops from 1 to 20 and uses a case statement to print specific "bad luck" messages for iterations 4, 9, and 17.
+
+# Initialize a counter variable
+count=1
+
+# Loop as long as count is less than or equal to 20
+while [ "$count" -le 20 ]; do
+    
+    # Use a case statement to check the value of the counter
+    case "$count" in
+        # Case for the 4th iteration
+        4)
+            echo "$count"
+            echo "bad luck from China"
+            ;;
+        # Case for the 9th iteration
+        9)
+            echo "$count"
+            echo "bad luck from Japan"
+            ;;
+        # Case for the 17th iteration
+        17)
+            echo "$count"
+            echo "bad luck from Italy"
+            ;;
+        # Default case for all other numbers (1, 2, 3, 5, 6, 7, 8, 10, etc.)
+        *)
+            echo "$count"
+            ;;
+    esac
+    
+    # Increment the counter
+    count=$((count + 1))
+done
