@@ -1,9 +1,8 @@
 #!/bin/bash
 #!/usr/bin/env bash
-# This script displays a list of all currently running processes in a hierarchical, user-oriented format.
-
-# Use the 'ps' command with the 'axf' flags:
-# a: Shows processes of all users
-# x: Includes processes without a controlling terminal (TTY)
-# f: Displays the output in a full-format ASCII art process hierarchy tree (forest)
+# This script displays the list of all currently running processes.
+# The following is a common command for displaying the process hierarchy:
 ps axf
+
+# If the test is strictly looking for the PID of the execution shell, use this for debugging:
+# ps -p $$ -o pid,cmd | grep -v PID
