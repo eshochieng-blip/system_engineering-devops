@@ -2,3 +2,4 @@
 #!/usr/bin/env bash
 while [ "$count" -le 10 ]; do
     echo "Best School"
+done
