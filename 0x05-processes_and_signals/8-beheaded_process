@@ -1,0 +1,10 @@
+#!/bin/bash
+#!/usr/bin/env bash
+# This script sends the SIGKILL signal (9) to forcibly terminate the '7-highlander' process.
+
+# Use pkill to find the target process by its full command line (-f)
+# and send signal 9 (SIGKILL) using the -9 option.
+pkill -9 -f "7-highlander"
+
+# Note: SIGKILL forces the kernel to stop the process immediately.
+# The 'Killed' message in the terminal confirms this forced termination.
