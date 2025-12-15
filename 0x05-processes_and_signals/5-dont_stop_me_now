@@ -1,21 +1,23 @@
 #!/bin/bash
-!/usr/bin/env bash
+#!/usr/bin/env bash
 # This script finds the PID of the '4-to_infinity_and_beyond' script and terminates it using the kill command.
 
-# Find the PID of the target script using pgrep, as it is the most robust tool for this purpose.
-# pgrep -f searches the full command line, not just the command name.
-# The `|| true` prevents the script from exiting if the process is not found.
-
+# Find the PID of the target script using pgrep.
+# -f searches the full command line, which is necessary to reliably find the script name.
 TARGET_PID=$(pgrep -f "4-to_infinity_and_beyond")
 
-# Check if a PID was actually found before attempting to kill
+# Check if a PID was actually found (the variable is not empty)
 if [ -n "$TARGET_PID" ]; then
     
-    # Use the kill command with signal 15 (SIGTERM - default and graceful termination)
-    # The PID is retrieved using command substitution
+    # Use the kill command with the default signal (SIGTERM, signal 15)
+    # This politely asks the process to terminate.
     kill "$TARGET_PID"
-    echo "Terminated process with PID: $TARGET_PID"
+    
+    # Optional: Confirmation message
+    # echo "Terminated process with PID: $TARGET_PID"
     
 else
-    echo "Process '4-to_infinity_and_beyond' not found."
+    # This branch handles the case where the script is not running
+    # echo "Process '4-to_infinity_and_beyond' not found."
+    : # Do nothing if not found, as the example output shows no output upon success.
 fi
