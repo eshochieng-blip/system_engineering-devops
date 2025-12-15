@@ -1,8 +1,7 @@
 #!/bin/bash
 #!/usr/bin/env bash
-# This script displays the list of all currently running processes.
-# The following is a common command for displaying the process hierarchy:
-ps axf
+# This script displays the PID and command of the shell process that executed it.
 
-# If the test is strictly looking for the PID of the execution shell, use this for debugging:
-# ps -p $$ -o pid,cmd | grep -v PID
+# The $$ variable holds the PID of the script itself.
+# Use 'ps' to find the process by PID and 'awk' to format the output.
+ps -p $$ -o pid,args | grep -v PID
