@@ -1,0 +1,9 @@
+#!/bin/bash
+#!/usr/bin/env bash
+# This script displays a list of all currently running processes in a hierarchical, user-oriented format.
+
+# Use the 'ps' command with the 'axf' flags:
+# a: Shows processes of all users
+# x: Includes processes without a controlling terminal (TTY)
+# f: Displays the output in a full-format ASCII art process hierarchy tree (forest)
+ps axf
