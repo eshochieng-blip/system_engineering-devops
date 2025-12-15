@@ -1,0 +1,14 @@
+#!/bin/bash
+#!/usr/bin/env bash
+# This script continuously displays "To infinity and beyond" using an infinite loop and pauses for 2 seconds between phrases.
+
+# Start an infinite loop (the condition 'true' is always true)
+while true; do
+    
+    # Display the required phrase
+    echo "To infinity and beyond"
+    
+    # Pause the execution for 2 seconds
+    sleep 2
+    
+done
