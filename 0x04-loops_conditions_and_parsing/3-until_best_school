@@ -1,8 +1,15 @@
 #!/bin/bash
 #!/usr/bin/env bash
-This script prints "Best School" 10 times using an until loop
-i=1
-until [ "i" -gt 10 ]; do
-  echo "Best School"
-  i=((i + 1))
+# This script uses an until loop to print the phrase "Best School" exactly 10 times.
+
+# Initialize a counter variable
+count=1
+
+# Start the until loop. The loop continues UNTIL 'count' is GREATER THAN 10.
+until [ "$count" -gt 10 ]; do
+    # Print the required phrase
+    echo "Best School"
+    
+    # Increment the counter for the next iteration
+    count=$((count + 1))
 done
