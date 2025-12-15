@@ -1,0 +1,26 @@
+#!/bin/bash
+#!/usr/bin/env bash
+# This script loops from 1 to 10 and uses an if-elif-else structure to print different phrases based on the iteration number.
+
+# Initialize a counter variable
+count=1
+
+# Loop as long as count is less than or equal to 10
+while [ "$count" -le 10 ]; do
+    
+    # Check for the 4th iteration
+    if [ "$count" -eq 4 ]; then
+        echo "bad luck"
+    
+    # Check for the 8th iteration
+    elif [ "$count" -eq 8 ]; then
+        echo "good luck"
+        
+    # For all other iterations
+    else
+        echo "Best School"
+    fi
+    
+    # Increment the counter
+    count=$((count + 1))
+done
