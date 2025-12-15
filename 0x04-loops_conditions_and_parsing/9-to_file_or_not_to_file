@@ -1,0 +1,34 @@
+#!/bin/bash
+#!/usr/bin/env bash
+# This script checks the existence and properties of a file named 'school' using if/else statements and file test operators.
+
+FILE_NAME="school"
+
+# 1. Check for existence: Use -e
+if [ -e "$FILE_NAME" ]; then
+    
+    # File exists branch
+    echo "$FILE_NAME file exists"
+    
+    # Further checks, only performed if the file exists:
+    
+    # Check if the file is empty: Use -s (true if size is greater than zero)
+    if [ -s "$FILE_NAME" ]; then
+        echo "$FILE_NAME file is not empty"
+    else
+        # If -s is false, the file is empty (size is zero)
+        echo "$FILE_NAME file is empty"
+    fi
+    
+    # Check if the file is a regular file: Use -f
+    if [ -f "$FILE_NAME" ]; then
+        echo "$FILE_NAME is a regular file"
+    fi
+    # Note: If it's not a regular file (e.g., a directory), the requirement is to print nothing for this check.
+
+else
+    
+    # File does not exist branch
+    echo "$FILE_NAME file does not exist"
+    
+fi
