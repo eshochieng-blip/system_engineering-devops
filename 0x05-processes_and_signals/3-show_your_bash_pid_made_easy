@@ -1,6 +1,8 @@
 #!/bin/bash
 #!/usr/bin/env bash
-# This script lists all processes and filters the output to show only lines containing the word 'bash'.
-# shellcheck disable=SC2009
-# List all processes (axf) and pipe the output to grep to filter for 'bash'
-ps axf | grep bash
+# This script uses the pgrep command with the -l option to find processes containing "bash" and display their PID and name.
+
+# pgrep: Search for processes by name.
+# -f: Match against the full command line (useful for scripts).
+# -l: List the PID and the name of the process.
+pgrep -fl bash
