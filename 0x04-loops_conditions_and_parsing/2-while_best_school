@@ -1,8 +1,15 @@
 #!/bin/bash
 #!/usr/bin/env bash
-This script prints "Best School" 10 times using a while loop
-i=1
-while [ i -le 10 ]; do
-  echo "Best School"
-  i=((i + 1))
+# This script uses a while loop to print the phrase "Best School" exactly 10 times.
+
+# Initialize a counter variable
+count=1
+
+# Start the while loop. The loop continues as long as 'count' is less than or equal to 10.
+while [ "$count" -le 10 ]; do
+    # Print the required phrase
+    echo "Best School"
+    
+    # Increment the counter for the next iteration
+    count=$((count + 1))
 done
