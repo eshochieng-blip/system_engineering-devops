@@ -1,7 +1,4 @@
 #!/bin/bash
 #!/usr/bin/env bash
-# This script displays the PID and command of the shell process that executed it.
-
-# The $$ variable holds the PID of the script itself.
-# Use 'ps' to find the process by PID and 'awk' to format the output.
-ps -p $$ -o pid,args | grep -v PID
+# This script displays a list of all currently running processes in a hierarchical, user-oriented format.
+ps axf
