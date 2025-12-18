@@ -1,7 +1,5 @@
 #!/bin/bash
 #!/usr/bin/env bash
-# This script lists all processes and filters the output to show only lines containing the word 'bash'.
+# This script lists all processes but filters for lines containing "bash"
 # shellcheck disable=SC2009
-
-# List all processes (axf) and pipe the output to grep to filter for 'bash'
-ps axf | grep bash
+ps aux | grep bash
