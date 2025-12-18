@@ -1,9 +1,11 @@
 #!/bin/bash
 #!/usr/bin/env bash
-Trap SIGTERM and respond with custom message
-trap "echo 'I am invincible!!!'" SIGTERM
+# A script that displays "To infinity and beyond" indefinitely
+# and reacts to SIGTERM with "I am invincible!!!"
 
-Infinite loop
+# Define the trap at the top of the script
+trap 'echo "I am invincible!!!"' SIGTERM
+
 while true
 do
     echo "To infinity and beyond"
