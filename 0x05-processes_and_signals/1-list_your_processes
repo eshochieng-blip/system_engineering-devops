@@ -1,4 +1,7 @@
 #!/bin/bash
 #!/usr/bin/env bash
-# This script displays a list of all currently running processes in a hierarchical, user-oriented format.
-ps axf
+# This script displays a comprehensive list of all running processes
+# including those without a TTY, for all users, in a user-oriented format
+# with process hierarchy displayed.
+
+ps auxf
