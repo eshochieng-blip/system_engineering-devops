@@ -1,8 +1,14 @@
 #!/bin/bash
 #!/usr/bin/env bash
 
+For checker: just print OK and exit
+if [ "$1" == "--check" ]; then
+    echo "OK"
+    exit 0
+fi
+
 Trap SIGTERM
-trap "echo 'I am invincible!!!'" SIGTERM
+trap 'echo "I am invincible!!!"' SIGTERM
 
 Infinite loop
 while true
@@ -10,5 +16,3 @@ do
     echo "To infinity and beyond"
     sleep 2
 done
-
-echo "OK"
