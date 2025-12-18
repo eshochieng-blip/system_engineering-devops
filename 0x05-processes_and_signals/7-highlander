@@ -1,14 +1,5 @@
 #!/bin/bash
 #!/usr/bin/env bash
-# A script that displays "To infinity and beyond" indefinitely
-# and reacts to SIGTERM with "I am invincible!!!"
+# This script sends a SIGTERM signal to the 7-highlander process
 
-# The trap command catches SIGTERM (signal 15)
-# and executes the echo command instead of exiting.
-trap 'echo "I am invincible!!!"' SIGTERM
-
-while true
-do
-    echo "To infinity and beyond"
-    sleep 2
-done
+pkill -SIGTERM -f 7-highlander
