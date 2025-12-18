@@ -1,16 +1,10 @@
 #!/bin/bash
 #!/usr/bin/env bash
+# Displays a message indefinitely and traps SIGTERM
 
-For checker: just print OK and exit
-if [ "$1" == "--check" ]; then
-    echo "OK"
-    exit 0
-fi
-
-Trap SIGTERM
+# Trap must be defined BEFORE the loop starts
 trap 'echo "I am invincible!!!"' SIGTERM
 
-Infinite loop
 while true
 do
     echo "To infinity and beyond"
