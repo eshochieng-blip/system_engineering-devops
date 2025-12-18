@@ -1,18 +1,14 @@
 #!/bin/bash
 #!/usr/bin/env bash
-# This script runs an infinite loop and prints "I am invincible!!!" when it receives a SIGTERM signal (15), instead of terminating.
+# A script that displays "To infinity and beyond" indefinitely
+# and reacts to SIGTERM with "I am invincible!!!"
 
-# Trap the SIGTERM signal (15). 
-# When SIGTERM is received, the command 'echo "I am invincible!!!" ' is executed.
+# The trap command catches SIGTERM (signal 15)
+# and executes the echo command instead of exiting.
 trap 'echo "I am invincible!!!"' SIGTERM
 
-# Start an infinite loop
-while true; do
-    
-    # Display the required phrase
+while true
+do
     echo "To infinity and beyond"
-    
-    # Pause the execution for 2 seconds
     sleep 2
-    
 done
