@@ -1,13 +1,7 @@
 #!/bin/bash
 #!/usr/bin/env bash
-# A script that displays "To infinity and beyond" indefinitely
-# and reacts to SIGTERM with "I am invincible!!!"
-
-# Define the trap at the top of the script
 trap 'echo "I am invincible!!!"' SIGTERM
-
-while true
-do
+while true; do
     echo "To infinity and beyond"
-    sleep 2
+    sleep 2 & wait $!  # Runs sleep in background and waits for it
 done
